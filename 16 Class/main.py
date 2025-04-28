@@ -1,4 +1,0 @@
-#
-
-# Pretty Table
-import prettytable
