@@ -19,23 +19,28 @@ tim.color("sea green")   # para ver los colores https://trinket.io/docs/colors
 #     tim.forward(10)
 #     tim.pendown()
 
+
+# Challenge 3
+
 def random_pen_color():
     r = random.random()
     b = random.random()
     g = random.random()
-
-
     tim.pencolor(r,b,g)
 
-# Challenge 3
-form_angle = 3
-while form_angle <11:
-    random_pen_color()
-    angle = 360 / form_angle
-    for n in range (form_angle):
+
+def draw_shape(num_side):
+    angle = 360 / num_side
+    for n in range(num_side):
         tim.left(angle)
         tim.forward(100)
-    form_angle += 1
+
+
+# Aca arranca le ejecucion
+for shape in  range (3, 11):
+    random_pen_color()
+    draw_shape(shape)
+
 
 
 
