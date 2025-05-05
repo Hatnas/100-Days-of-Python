@@ -41,6 +41,15 @@ def random_pen_color():
 #     random_pen_color()
 #     draw_shape(shape)
 
+#
+# #### Challenge 5 ####
+# orientation = 0
+# for _ in range (70):
+#     random_pen_color()
+#     tim.setheading(orientation)
+#     tim.circle(100)
+#     orientation += 12
+
 
 
 
