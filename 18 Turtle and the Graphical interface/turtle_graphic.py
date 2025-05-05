@@ -1,5 +1,5 @@
 ### Day 18 ###
-# La documentacion de la libreria esta en https://docs.python.org/3/library/turtle.html#
+# La documentación de la libreria está en https://docs.python.org/3/library/turtle.html#
 from turtle import Turtle, Screen
 import random
 
@@ -28,18 +28,20 @@ def random_pen_color():
     g = random.random()
     tim.pencolor(r,b,g)
 
+# ### Random color Shape
+# def draw_shape(num_side):
+#     angle = 360 / num_side
+#     for n in range(num_side):
+#         tim.left(angle)
+#         tim.forward(100)
+#
+#
+# # Aca arranca le ejecucion
+# for shape in  range (3, 11):
+#     random_pen_color()
+#     draw_shape(shape)
 
-def draw_shape(num_side):
-    angle = 360 / num_side
-    for n in range(num_side):
-        tim.left(angle)
-        tim.forward(100)
 
-
-# Aca arranca le ejecucion
-for shape in  range (3, 11):
-    random_pen_color()
-    draw_shape(shape)
 
 
 
