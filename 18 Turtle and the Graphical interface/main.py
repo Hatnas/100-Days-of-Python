@@ -7,7 +7,7 @@ import random
 t.colormode(255)
 tim = Turtle()
 tim.shape("turtle")
-tim.color("sea green")   # para ver los colores https://trinket.io/docs/colors
+tim.color("violet")   # para ver los colores https://trinket.io/docs/colors
 
 
 def random_pen_color():
