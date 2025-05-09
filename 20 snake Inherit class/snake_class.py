@@ -1,4 +1,4 @@
-from turtle import Turtle,Screen
+from turtle import Turtle
 
 # ESTAS son variables constantes. Por eso estan en mayuscula
 STARTER_POSITION  = [(0, 0), (-20, 0), (-40, 0)]
