@@ -47,7 +47,7 @@ while game_is_on:
 
 
     # Detect collision with head
-    for segment in snake.segments[1:]:
+    for segment in snake.segments[1:]: # Esta es la forma de hacer un slice de una lista o tupla
         if snake.head.distance(segment) < 10:
             scoreboard.game_over()
             game_is_on = False
