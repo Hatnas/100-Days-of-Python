@@ -10,9 +10,8 @@ class Paddle1(Turtle):
         self.turtlesize(5, 1)
         self.color("white")
         self.penup()
-        self.speed("fastest")
-        self.setpos(x= 350, y= 0)
-        self.ycor()
+        self.setpos(x= 370, y= 0)
+
 
 
 ## Controles
@@ -25,5 +24,10 @@ class Paddle1(Turtle):
         self.goto(self.xcor(), new_ycor)
 
 
+
+class Paddle2 (Paddle1):
+    def __init__(self):
+        super().__init__()
+        self.setpos(x=-370, y=0)
 
 

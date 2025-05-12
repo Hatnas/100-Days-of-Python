@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 
-class Mark(Turtle):
+class Net(Turtle):
     def __init__(self):
         super().__init__()
         self.speed("fastest")
