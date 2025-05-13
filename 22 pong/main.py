@@ -41,7 +41,7 @@ screen.onkey( pad_l.go_down, "s" )
 game_in_on = True
 while game_in_on:
     ball.move()
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
 
     #Collision with wall
@@ -51,15 +51,17 @@ while game_in_on:
     # Collision With Paddles
     if ball.distance(pad_r) < 50 and  ball.xcor() > 350 or ball.distance(pad_l) < 50 and  ball.xcor() < -350:
         ball.bounce_paddle()
+        ball.speed_up()
+
 
     # Punto Paddle R
     if ball.xcor() < -360:
-        scoreboard.pad_r_pont()
+        scoreboard.pad_r_point()
         ball.reset()
 
     # Punto Paddle L
     if ball.xcor() > 360:
-        scoreboard.pad_l_pont()
+        scoreboard.pad_l_point()
         ball.reset()
 
 

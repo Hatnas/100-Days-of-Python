@@ -21,12 +21,12 @@ class Scoreboard (Turtle):
 
 
 
-    def pad_l_pont(self):
+    def pad_l_point(self):
         self.clear()
         self.pad_l_score += 1
         self.score_update()
 
-    def pad_r_pont(self):
+    def pad_r_point(self):
         self.clear()
         self.pad_r_score += 1
         self.score_update()
