@@ -12,6 +12,7 @@ class Scoreboard (Turtle):
         self.goto(0, 270)
         self.hideturtle()
         self.score_update()
+        self.high_score = 0
 
 
     def score_update(self):

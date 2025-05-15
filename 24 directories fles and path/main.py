@@ -40,15 +40,14 @@ while game_is_on:
 
     # Detect collision with walls
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        scoreboard.game_over()
-        game_is_on = False
+        scoreboard.reset()
+        snake.reset()
 
     # Detect collision with head
     for segment in snake.segments[1:]: # Esta es la forma de hacer un slice de una lista o tupla
         if snake.head.distance(segment) < 10:
-            scoreboard.game_over()
-            game_is_on = False
-
+            scoreboard.reset()
+            snake.reset()
 
 
 
