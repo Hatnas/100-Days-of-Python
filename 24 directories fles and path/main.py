@@ -1,68 +1,42 @@
+### Open read and write files ###
 
-from turtle import Screen
-from snake_class import Snake
-from food import Food
-from scoreboard import Scoreboard
-import time
-
-screen = Screen()
-screen.setup(width= 600, height= 600)
-screen.bgcolor("black")
-screen.title("My Snake Game")
-screen.tracer(0)
-
-
-snake = Snake()
-food = Food()
-scoreboard = Scoreboard()
-
-screen.listen()
-screen.onkey(fun= snake.up, key="Up")
-screen.onkey(fun= snake.down, key="Down" )
-screen.onkey(fun= snake.left, key="Left" )
-screen.onkey(fun= snake.right, key="Right" )
+# # Para abrir el archivo. Uso el comando "open" . Lo establezco como un objeto
+# file = open("my_file.txt")
+#
+# # para leer uso el metodo del objeto, que tiene un raturn. y se lo adjudico a una variable
+# content =  file.read()
+# print(content)
+## Para cerrar el File tengo que usar otro metodo.
+# file.close()
 
 
 
-# Aca arranca la ejecución
+## Una forma mas practica de hacerlo es: ##
+# Usando la key-word With, establezco que la variable file abra el .txt. Sin tener que pensar en cerrarlo.
+# Pero si tengo que Indentarlo
 
-game_is_on = True
-while game_is_on:
-    screen.update()  # esto busca que los segmentos se muevan en bloque
-    time.sleep(0.1)
-    snake.move()
+with open("my_file.txt") as file:
+    content =file.read()
+    print(content)
 
-    # Detect collision with food
-    if snake.head.distance(food) < 15:
-        food.spam()
-        snake.extend()
-        scoreboard.score_increase()
+    # Para escribir tengo que llamar al metodo write() del objeto file
+    # Para poder escribir tengo que establecer el modo de apertura. Por default esta en "r" (read)
+    # tenemos que ponerlo en "w" (write). Esto sobreescribe lo que habia
+    # el metodo para agregar es "a"(append)
+with open("my_file.txt","a") as file:
+    file.write("\nCaballos, muchos caballos")
 
-    # Detect collision with walls
-    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        scoreboard.reset()
-        snake.reset()
+# Si trato de abrir un file en write mode y este archivo no existe. Este nuevo archivo se va a crear
+# with open("new_fie.txt","w") as new_file:
+#     new_file.write("This is a new file")
 
-    # Detect collision with head
-    for segment in snake.segments[1:]: # Esta es la forma de hacer un slice de una lista o tupla
-        if snake.head.distance(segment) < 10:
-            scoreboard.reset()
-            snake.reset()
+# Para buscar un archivo tengo que poner el path que lleve
+# Absolut path (empieza desde C: "\Leo\Programacion\Cursos Python\D24 my new file .txt"
+# Relative path. (empieza desde la carpeta donde estamos) "..\..\..\Cursos Python\D24 my new file .txt"
+with open("..\..\..\Cursos Python\D24 my new file .txt") as d24:
+    print (d24.read())
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-screen.exitonclick()
