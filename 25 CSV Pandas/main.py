@@ -66,7 +66,7 @@ condition2 = data.condition
 # GET DATA IN ROW
 # Para obtener todos los datos de una fila tengo que pedirle que busque alguna referencia
 # Aca le pido que busque en la columna day un value "Monday" y que me imprima  el row completo
-print (data[data.day == "Monday"])
+print (data[data.day == "Monday"]) # Esto es una Lista
 
 # puedo pedir una informacion particular dentro del row. Por ejemplo si quiero la condition del dia Tuesday
 tuesday = (data[data.day == "Tuesday"])
