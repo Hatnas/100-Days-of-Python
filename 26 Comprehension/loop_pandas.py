@@ -15,6 +15,8 @@ student_data_frame = pandas.DataFrame(student_dict)
 # 2     Lily     98
 
 
+##  METODO ITERROWS ##
+
 # Pandas tiene un metodo interno para itinerar entre rows: iterrows()
 for(index, row) in student_data_frame.iterrows(): # por cada index con un row..
     # esto va a devolver un "objeto"  y puedo llamar a los diferentes atributos.
