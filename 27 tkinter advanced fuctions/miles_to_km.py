@@ -11,9 +11,9 @@ def miles_to_km(a):
     return km
 
 def answer():
-    miles_input = int(entry.get())
-    km_answer = {miles_to_km(miles_input)}
-    km_conv["text"]= f"{km_answer}"
+    miles_input = float(entry.get())
+    km_answer = miles_to_km(miles_input)
+    km_conv.config(text= f"{km_answer}")
 
 window = Tk()
 window.minsize(width= 200, height= 100)
